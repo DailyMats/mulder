@@ -23,7 +23,7 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         command:
           - /mulder
-          - --redis-addr={{ .Release.name }}-redis-master:6379
+          - --redis-addr={{ .Release.Name }}-redis-master:6379
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
